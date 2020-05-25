@@ -2,7 +2,42 @@
     Header
 ============= */
 #header {
-    .grid-content{
-        height: 100px;
+    background-color: $white;
+
+    ul {
+        text-align: center;
     }
+    opacity: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    >div {
+        display: grid;
+        grid-template-areas: 
+            "logo burger"
+            "nav nav";
+
+        #logo-container {
+            grid-area: logo;
+        }
+
+        #burger-container {
+            grid-area: burger;
+        }
+
+        #nav-container {
+            grid-area: nav;
+            display: none;
+        }
+        grid-template-columns: 80% auto;
+        section {
+            i {
+                color: $black;
+            }
+        }
+        
+    }
+
 }

@@ -2,8 +2,65 @@
     Section 4
 ============= */
 #section-4{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: ". section-4 .";
+    margin: 30px;
+    text-align: center;
     .grid-content{
-        
+        display: grid;
     }
 
+    ul {
+        display: grid;
+        grid-gap: 10px;
+
+        grid-template-areas: 
+            "reason-1"
+            "reason-2"
+            "reason-3";
+
+        #reason-1 {
+            grid-area: reason-1;
+            background-color: $grey;
+            height: 687px;
+        }
+
+        #gallery-1 {
+            background-image: url("../img/reason-1.png");
+            background-position: center;
+            background-size: cover;
+            height: 259px;
+            width: 300px; 
+         }
+
+         #reason-2 {
+            grid-area: reason-2;
+            background-color: $grey;
+            height: 687px;
+        }
+
+        #gallery-2 {
+            background-image: url("../img/reason-2.png");
+            background-position: center;
+            background-size: cover;
+            height: 259px;
+            width: 300px; 
+         }
+
+         #reason-3 {
+            grid-area: reason-3;
+            background-color: $grey;
+            height: 687px;
+        }
+
+        #gallery-3 {
+            background-image: url("../img/reason-3.png");
+            background-position: center;
+            background-size: cover;
+            height: 259px;
+            width: 300px; 
+         }
+
+    }
 }

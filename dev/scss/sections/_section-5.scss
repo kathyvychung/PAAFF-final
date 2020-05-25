@@ -1,0 +1,85 @@
+/* =============
+    Section 5
+============= */
+#section-5{
+    background-color: $red;
+    color: $yellow;
+    height: 400px;
+
+    @include md {
+        height: 712px;
+    }
+
+    @include lg {
+        height: 1161px;
+    }
+
+    @include xl {
+        height: 1467px;
+    }
+
+    display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: ". section-1 .";
+
+    >div {
+        display: grid;
+        grid-template-columns: 50px auto;
+        grid-template-areas:
+            "aside pull-quote";
+    }
+
+    #pull-quote { 
+        grid-area: pull-quote;
+        background-image: url(../img/banquet.png);
+        background-size: cover;
+        background-position: center;
+        height: 364px;
+        width: 197px;
+        margin-left: 113px;
+
+        @include md {
+            height: 676px;
+            width: 365px;
+        }
+
+        @include lg {
+            height: 1030px;
+            width: 555px;
+        }
+    
+        @include xl {
+            height: 1467px;
+        }
+    }
+
+    h1 {
+        text-align: right;
+        width: 300px;
+    }
+   aside {
+        grid-area: aside;
+        margin-left: 0px;
+        padding-top: 100px;
+        position: relative;
+        top: 30px;
+
+        @include md {
+            font-size: 48px;
+            margin: 20px;
+            padding-top: 230px;
+            padding-left: 170px;
+        }
+
+        @include lg {
+            margin: 20px;
+            padding-top: 450px;
+            padding-left: 170px;
+        }
+    
+        @include xl {
+            height: 1467px;
+        }
+    }
+    
+}

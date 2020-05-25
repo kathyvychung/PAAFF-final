@@ -21,7 +21,7 @@
 		},
 	"/deploy/img/2017.jpg": {
 		"ft": 16384,
-		"iS": 38912,
+		"iS": 38390,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/deploy/img/2017.jpg",
@@ -32,7 +32,7 @@
 		},
 	"/deploy/img/2018.jpg": {
 		"ft": 16384,
-		"iS": 197754,
+		"iS": 161467,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/deploy/img/2018.jpg",
@@ -43,7 +43,7 @@
 		},
 	"/deploy/img/2019.jpg": {
 		"ft": 16384,
-		"iS": 209487,
+		"iS": 201830,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/deploy/img/2019.jpg",
@@ -52,9 +52,20 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/deploy/img/banquet.png": {
+		"ft": 32768,
+		"iS": 1332955,
+		"oA": 0,
+		"oAP": "/deploy/img/banquet.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/deploy/img/contact.jpg": {
 		"ft": 16384,
-		"iS": 327013,
+		"iS": 218049,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/deploy/img/contact.jpg",
@@ -65,7 +76,7 @@
 		},
 	"/deploy/img/dance.png": {
 		"ft": 32768,
-		"iS": 264598,
+		"iS": 56659,
 		"oA": 0,
 		"oAP": "/deploy/img/dance.png",
 		"oF": 0,
@@ -76,7 +87,7 @@
 		},
 	"/deploy/img/hero.png": {
 		"ft": 32768,
-		"iS": 1073719,
+		"iS": 298855,
 		"oA": 0,
 		"oAP": "/deploy/img/hero.png",
 		"oF": 0,
@@ -87,7 +98,7 @@
 		},
 	"/deploy/img/lion.png": {
 		"ft": 32768,
-		"iS": 350920,
+		"iS": 87176,
 		"oA": 0,
 		"oAP": "/deploy/img/lion.png",
 		"oF": 0,
@@ -98,7 +109,7 @@
 		},
 	"/deploy/img/logo.png": {
 		"ft": 32768,
-		"iS": 5275,
+		"iS": 2369,
 		"oA": 0,
 		"oAP": "/deploy/img/logo.png",
 		"oF": 0,
@@ -109,7 +120,7 @@
 		},
 	"/deploy/img/reason-1.png": {
 		"ft": 32768,
-		"iS": 567651,
+		"iS": 143547,
 		"oA": 0,
 		"oAP": "/deploy/img/reason-1.png",
 		"oF": 0,
@@ -120,7 +131,7 @@
 		},
 	"/deploy/img/reason-2.png": {
 		"ft": 32768,
-		"iS": 554503,
+		"iS": 162353,
 		"oA": 0,
 		"oAP": "/deploy/img/reason-2.png",
 		"oF": 0,
@@ -131,7 +142,7 @@
 		},
 	"/deploy/img/reason-3.png": {
 		"ft": 32768,
-		"iS": 515678,
+		"iS": 146172,
 		"oA": 0,
 		"oAP": "/deploy/img/reason-3.png",
 		"oF": 0,
@@ -380,6 +391,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/dev/scss/sections/_section-4.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/dev/scss/sections/_section-5.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/dev/scss/sections/_section-5.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/dev/scss/sections/_section-6.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/dev/scss/sections/_section-6.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

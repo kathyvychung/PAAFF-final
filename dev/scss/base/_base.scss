@@ -18,7 +18,7 @@ ul{
     display: grid;
     grid-template-columns: auto 1200px auto;
     grid-template-areas: ". grid-content .";
-    min-height: 100vh;
+    min-height: 10vh;
 
     .grid-content{
         grid-area: grid-content;
