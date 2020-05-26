@@ -6,13 +6,14 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-areas: ". section-2 .";
-
     margin: 20px;
 
-    h1 {
-        color: $red;
-        text-align: center;
-    }
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-6 .";
+     }
+
     .grid-content{
         display: grid;
         grid-template-columns: auto;
@@ -21,34 +22,98 @@
             "h1"
             "p";
         grid-gap: 10px;
+
+        @include md {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-areas:
+                "lion"
+                "h1"
+                "p";
+        }
+        
+        @include lg {
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: 
+                "h1 lion"
+                "dance p";
+        }
+
+        @include xl {       
+            grid-area: section-6;
+        }
+
     }
 
     #lion {
         grid-area: lion;
-        grid-template-areas: ". lion .";
-
-        margin-left: 60px;
         background-image: url(../img/lion.png);
         background-position: center;
         background-size: cover;
         height: 187px;
         width: 188px;
+        margin-left: 70px;
 
         @include md {
+            display: grid;
             height: 277px;
             width: 279px;
+            margin-left: 250px;
+        }
+
+        @include lg {
+            display: grid;
+            height: 437px;
+            width: 440px;
+            margin-left: 0px;
+            margin-top: 50px;
         }
     }
 
+    #dance {
+        grid-area: dance;
+        background-image: url('../img/dance.png');
+        background-position: center;
+        background-size: cover;
+        display: none;
+
+        @include lg {
+            display: block;
+            height: 378px;
+            width: 381px;
+            margin-left: 200px;
+            margin-bottom: 500px;
+ 
+        }
+    }
+
+    h1 {
+        grid-area: h1;
+        color: $red;
+        text-align: center;
+
+        @include lg {
+            padding-top: 450px;
+            margin-left: 250px;
+        }
+    }
     p {
+        grid-area: p;
         text-align: justify;
         margin: 20px;
         line-height: 30px;
 
         @include md {
-        margin: 150px;
-        line-height: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin: 0px;
+        }
 
+        @include lg {
+            padding: 20px;
+            margin-bottom: 150px;
+            margin-right: 200px;
         }
     }
 }

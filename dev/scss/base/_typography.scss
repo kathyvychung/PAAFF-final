@@ -13,6 +13,10 @@ h1,h2,h3,h4{
 
 h1 {
     font-size: rem-calc(36);
+
+    @include md {
+        font-size: rem-calc(100);
+    }
 }
 
 h2 {
@@ -43,6 +47,16 @@ p{
     padding: 0;
     line-height: rem-calc(25);
     font-size: rem-calc(16);
+
+    @include md {
+        line-height: rem-calc(40);
+        font-size: rem-calc(21);
+    }
+
+    @include lg {
+        line-height: rem-calc(40);
+        font-size: rem-calc(21);
+    }
 }
 
 .section-title{

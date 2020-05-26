@@ -336,7 +336,7 @@ ul {
     grid-area: grid-content;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    align-items: center;
     align-items: center; }
 
 /* =============
@@ -352,7 +352,9 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 2.25rem; }
-
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 6.25rem; } }
 h2 {
   line-height: 1.875rem;
   font-size: 1.5rem; }
@@ -374,7 +376,14 @@ p {
   padding: 0;
   line-height: 1.5625rem;
   font-size: 1rem; }
-
+  @media (min-width: 768px) {
+    p {
+      line-height: 2.5rem;
+      font-size: 1.3125rem; } }
+  @media (min-width: 992px) {
+    p {
+      line-height: 2.5rem;
+      font-size: 1.3125rem; } }
 .section-title {
   font-weight: 300; }
 
@@ -447,10 +456,23 @@ textarea {
     #header > div #logo-container {
       grid-area: logo; }
     #header > div #burger-container {
-      grid-area: burger; }
+      align-items: center;
+      display: flex;
+      grid-area: burger;
+      justify-content: flex-end;
+      padding: 20px; }
+      @media (min-width: 992px) {
+        #header > div #burger-container {
+          display: none !important; } }
+      #header > div #burger-container i {
+        cursor: pointer; }
     #header > div #nav-container {
       grid-area: nav;
-      display: none; }
+      display: none;
+      padding: 20px; }
+      @media (min-width: 992px) {
+        #header > div #nav-container {
+          display: block !important; } }
     #header > div section i {
       color: #000; }
 
@@ -470,66 +492,74 @@ textarea {
 #section-1 {
   background-color: #DC1212;
   color: #FFCD54;
-  height: 400px;
+  height: 500px;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: ". section-1 ."; }
   @media (min-width: 768px) {
     #section-1 {
-      height: 600px; } }
+      height: 672px; } }
   @media (min-width: 992px) {
     #section-1 {
-      height: 836px; } }
+      height: 800px; } }
   @media (min-width: 1200px) {
     #section-1 {
-      height: 900px; } }
+      height: 900px;
+      display: grid;
+      grid-template-columns: 1200px auto;
+      grid-template-areas: "section-1 ."; } }
   #section-1 > div {
     display: grid;
     grid-template-columns: 50px auto;
     grid-template-areas: "hero-image aside";
-    padding-top: 70px; }
+    padding-top: 80px; }
     @media (min-width: 992px) {
       #section-1 > div {
-        padding-top: 60px; } }
+        padding-top: 100px; } }
+    @media (min-width: 1200px) {
+      #section-1 > div {
+        grid-area: section-1; } }
   #section-1 #hero-image {
     grid-area: hero-image;
     background-image: url(../img/hero.png);
     background-size: cover;
     background-position: center;
-    height: 364px;
-    width: 195px;
+    height: 400px;
+    width: 215px;
     margin: 0px; }
     @media (min-width: 768px) {
       #section-1 #hero-image {
-        height: 550px;
-        width: 295px; } }
+        height: 548px;
+        width: 297px; } }
     @media (min-width: 992px) {
       #section-1 #hero-image {
-        height: 750px;
-        width: 405px; } }
+        height: 680px;
+        width: 370px; } }
     @media (min-width: 1200px) {
       #section-1 #hero-image {
-        height: 800px;
-        width: 430px; } }
+        height: 770px;
+        width: 415px; } }
   #section-1 aside {
     grid-area: aside;
     margin: 5px;
     padding-top: 200px;
-    padding-left: 0px; }
+    padding-right: 0px; }
     @media (min-width: 768px) {
       #section-1 aside {
         margin: 20px;
-        padding-top: 300px;
+        padding-top: 250px;
         padding-left: 20px; } }
     @media (min-width: 992px) {
       #section-1 aside {
         margin: 20px;
-        padding-top: 300px;
+        padding-top: 280px;
         padding-left: 70px;
-        padding-right: 100px; } }
+        padding-right: 0px; } }
     @media (min-width: 1200px) {
       #section-1 aside {
-        height: 1467px; } }
+        margin: 20px;
+        padding-top: 200px;
+        padding-left: 70px; } }
 /* =============
     Section 2
 ============= */
@@ -538,35 +568,86 @@ textarea {
   grid-template-columns: auto;
   grid-template-areas: ". section-2 .";
   margin: 20px; }
-  #section-2 h1 {
-    color: #DC1212;
-    text-align: center; }
+  @media (min-width: 1200px) {
+    #section-2 {
+      display: grid;
+      grid-template-columns: auto 1200px auto;
+      grid-template-areas: ". section-6 ."; } }
   #section-2 .grid-content {
     display: grid;
     grid-template-columns: auto;
     grid-template-areas: "lion" "h1" "p";
     grid-gap: 10px; }
+    @media (min-width: 768px) {
+      #section-2 .grid-content {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "lion" "h1" "p"; } }
+    @media (min-width: 992px) {
+      #section-2 .grid-content {
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "h1 lion" "dance p"; } }
+    @media (min-width: 1200px) {
+      #section-2 .grid-content {
+        grid-area: section-6; } }
   #section-2 #lion {
     grid-area: lion;
-    grid-template-areas: ". lion .";
-    margin-left: 60px;
     background-image: url(../img/lion.png);
     background-position: center;
     background-size: cover;
     height: 187px;
-    width: 188px; }
+    width: 188px;
+    margin-left: 70px; }
     @media (min-width: 768px) {
       #section-2 #lion {
+        display: grid;
         height: 277px;
-        width: 279px; } }
+        width: 279px;
+        margin-left: 250px; } }
+    @media (min-width: 992px) {
+      #section-2 #lion {
+        display: grid;
+        height: 437px;
+        width: 440px;
+        margin-left: 0px;
+        margin-top: 50px; } }
+  #section-2 #dance {
+    grid-area: dance;
+    background-image: url("../img/dance.png");
+    background-position: center;
+    background-size: cover;
+    display: none; }
+    @media (min-width: 992px) {
+      #section-2 #dance {
+        display: block;
+        height: 378px;
+        width: 381px;
+        margin-left: 200px;
+        margin-bottom: 500px; } }
+  #section-2 h1 {
+    grid-area: h1;
+    color: #DC1212;
+    text-align: center; }
+    @media (min-width: 992px) {
+      #section-2 h1 {
+        padding-top: 450px;
+        margin-left: 250px; } }
   #section-2 p {
+    grid-area: p;
     text-align: justify;
     margin: 20px;
     line-height: 30px; }
     @media (min-width: 768px) {
       #section-2 p {
-        margin: 150px;
-        line-height: 40px; } }
+        padding-left: 60px;
+        padding-right: 60px;
+        margin: 0px; } }
+    @media (min-width: 992px) {
+      #section-2 p {
+        padding: 20px;
+        margin-bottom: 150px;
+        margin-right: 200px; } }
 /* =============
     Section 3
 ============= */

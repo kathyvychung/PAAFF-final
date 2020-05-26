@@ -4,18 +4,21 @@
 #section-1{
     background-color: $red;
     color: $yellow;
-    height: 400px;
+    height: 500px;
 
     @include md {
-        height: 600px;
+        height: 672px;
     }
 
     @include lg {
-        height: 836px;
+        height: 800px;
     }
 
     @include xl {
         height: 900px;
+        display: grid;
+        grid-template-columns:1200px auto;
+        grid-template-areas: "section-1 .";
     }
 
     display: grid;
@@ -27,10 +30,14 @@
         grid-template-columns: 50px auto;
         grid-template-areas:
             "hero-image aside";
-        padding-top: 70px;
+        padding-top: 80px;
 
         @include lg {
-            padding-top: 60px;
+            padding-top: 100px;
+        }
+
+        @include xl{        
+            grid-area: section-1;
         }
 
     }
@@ -40,23 +47,23 @@
         background-image: url(../img/hero.png);
         background-size: cover;
         background-position: center;
-        height: 364px;
-        width: 195px;
+        height: 400px;
+        width: 215px;
         margin: 0px;
 
         @include md {
-            height: 550px;
-            width: 295px;
+            height: 548px;
+            width: 297px;
         }
 
         @include lg {
-            height: 750px;
-            width: 405px;
+            height: 680px;
+            width: 370px;
         }
     
         @include xl {
-            height: 800px;
-            width: 430px;
+            height: 770px;
+            width: 415px;
         }
     }
 
@@ -64,23 +71,25 @@
         grid-area: aside;
         margin: 5px;
         padding-top: 200px;
-        padding-left: 0px;
+        padding-right: 0px;
 
         @include md {
             margin: 20px;
-            padding-top: 300px;
+            padding-top: 250px;
             padding-left: 20px;
         }
 
         @include lg {
             margin: 20px;
-            padding-top: 300px;
+            padding-top: 280px;
             padding-left: 70px;
-            padding-right: 100px;
+            padding-right: 0px;
         }
     
         @include xl {
-            height: 1467px;
+            margin: 20px;
+            padding-top: 200px;
+            padding-left: 70px;
         }
     }
     
