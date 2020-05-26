@@ -593,12 +593,7 @@ textarea {
         grid-area: section-6; } }
   #section-2 #lion {
     grid-area: lion;
-    background-image: url(../img/lion.png);
-    background-position: center;
-    background-size: cover;
-    height: 187px;
-    width: 188px;
-    margin-left: 70px; }
+    text-align: center; }
     @media (min-width: 768px) {
       #section-2 #lion {
         display: grid;
@@ -612,6 +607,13 @@ textarea {
         width: 440px;
         margin-left: 0px;
         margin-top: 50px; } }
+    #section-2 #lion #lion-background {
+      background-image: url(../img/lion.png);
+      background-position: center;
+      background-size: cover;
+      height: 187px;
+      width: 188px;
+      margin-left: 70px; }
   #section-2 #dance {
     grid-area: dance;
     background-image: url("../img/dance.png");
@@ -706,7 +708,6 @@ textarea {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: ". section-4 .";
-  margin: 30px;
   text-align: center; }
   #section-4 .grid-content {
     display: grid; }
@@ -774,8 +775,7 @@ textarea {
     background-size: cover;
     background-position: center;
     height: 364px;
-    width: 197px;
-    margin-left: 113px; }
+    width: 197px; }
     @media (min-width: 768px) {
       #section-5 #pull-quote {
         height: 676px;

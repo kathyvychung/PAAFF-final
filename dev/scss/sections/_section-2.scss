@@ -48,12 +48,7 @@
 
     #lion {
         grid-area: lion;
-        background-image: url(../img/lion.png);
-        background-position: center;
-        background-size: cover;
-        height: 187px;
-        width: 188px;
-        margin-left: 70px;
+        text-align: center;
 
         @include md {
             display: grid;
@@ -68,6 +63,16 @@
             width: 440px;
             margin-left: 0px;
             margin-top: 50px;
+        }
+
+        #lion-background {
+            background-image: url(../img/lion.png);
+            background-position: center;
+            background-size: cover;
+            height: 187px;
+            width: 188px;
+            margin-left: 70px;
+    
         }
     }
 
