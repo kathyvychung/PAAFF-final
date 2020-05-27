@@ -334,10 +334,7 @@ ul {
   min-height: 10vh; }
   .container-grid .grid-content {
     grid-area: grid-content;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    align-items: center; }
+    text-align: center; }
 
 /* =============
     Typography
@@ -565,88 +562,62 @@ textarea {
 ============= */
 #section-2 {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: ". section-2 .";
-  margin: 20px; }
+  grid-template-columns: auto 320px auto;
+  grid-template-areas: ". grid-content ."; }
   @media (min-width: 1200px) {
     #section-2 {
       display: grid;
-      grid-template-columns: auto 1200px auto;
-      grid-template-areas: ". section-6 ."; } }
-  #section-2 .grid-content {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: "lion" "h1" "p";
-    grid-gap: 10px; }
-    @media (min-width: 768px) {
-      #section-2 .grid-content {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-areas: "lion" "h1" "p"; } }
-    @media (min-width: 992px) {
-      #section-2 .grid-content {
-        display: grid;
-        grid-template-columns: 50% auto;
-        grid-template-areas: "h1 lion" "dance p"; } }
-    @media (min-width: 1200px) {
-      #section-2 .grid-content {
-        grid-area: section-6; } }
-  #section-2 #lion {
+      grid-template-columns: auto 1200px auto; } }
+  @media (min-width: 992px) {
+    #section-2 .grid-content {
+      display: grid;
+      grid-template-columns: 50% auto;
+      grid-template-areas: "h1 lion" "dance p"; } }
+  @media (min-width: 1200px) {
+    #section-2 .grid-content {
+      grid-area: section-6; } }
+  #section-2 .grid-content #lion {
     grid-area: lion;
     text-align: center; }
-    @media (min-width: 768px) {
-      #section-2 #lion {
-        display: grid;
-        height: 277px;
-        width: 279px;
-        margin-left: 250px; } }
-    @media (min-width: 992px) {
-      #section-2 #lion {
-        display: grid;
-        height: 437px;
-        width: 440px;
-        margin-left: 0px;
-        margin-top: 50px; } }
-    #section-2 #lion #lion-background {
+    #section-2 .grid-content #lion #lion-background {
       background-image: url(../img/lion.png);
       background-position: center;
       background-size: cover;
       height: 187px;
-      width: 188px;
-      margin-left: 70px; }
-  #section-2 #dance {
+      width: 188px; }
+  #section-2 .grid-content #dance {
     grid-area: dance;
     background-image: url("../img/dance.png");
     background-position: center;
     background-size: cover;
     display: none; }
     @media (min-width: 992px) {
-      #section-2 #dance {
+      #section-2 .grid-content #dance {
         display: block;
         height: 378px;
         width: 381px;
         margin-left: 200px;
         margin-bottom: 500px; } }
-  #section-2 h1 {
+  #section-2 .grid-content h1 {
     grid-area: h1;
     color: #DC1212;
     text-align: center; }
     @media (min-width: 992px) {
-      #section-2 h1 {
+      #section-2 .grid-content h1 {
         padding-top: 450px;
         margin-left: 250px; } }
-  #section-2 p {
+  #section-2 .grid-content p {
     grid-area: p;
     text-align: justify;
     margin: 20px;
     line-height: 30px; }
     @media (min-width: 768px) {
-      #section-2 p {
+      #section-2 .grid-content p {
         padding-left: 60px;
         padding-right: 60px;
         margin: 0px; } }
     @media (min-width: 992px) {
-      #section-2 p {
+      #section-2 .grid-content p {
         padding: 20px;
         margin-bottom: 150px;
         margin-right: 200px; } }
