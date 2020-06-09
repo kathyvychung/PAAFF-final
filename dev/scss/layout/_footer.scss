@@ -7,6 +7,38 @@
     height: 264px;
     text-align: center;
     color: $red;
-
     
+    h5 {
+        font-size: 20px;
+        padding: 30px;
+    }
+
+    * {
+        box-sizing:border-box;
+        text-align: center;
+      }
+      body {
+        background-color: $white;
+      }
+      textarea {
+        font-size: 15px;
+        width: 70%;
+        resize: vertical;
+        border-radius: 6px;
+        border: 1;
+        height: 27px;
+        text-align: left;
+      }   
+
+      #button {
+        background-color: $red;
+        border-radius: 15px;
+        width: 100px;
+        height: 30px;
+        margin: 0 auto;
+        p {
+            color: $white;
+            text-align: center;
+        }
+    }
 }

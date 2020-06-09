@@ -21,7 +21,14 @@
 
         #logo-container {
             grid-area: logo;
-
+            padding: 20px;
+            >div {
+                background-image: url(../img/logo.svg);
+                background-size: cover;
+                background-position: center;
+                height: 35px;
+                width: 70px;
+            }
         }
 
         #burger-container {

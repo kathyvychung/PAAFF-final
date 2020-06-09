@@ -5,62 +5,106 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-areas: ". section-4 .";
-   // margin: 30px;
-    text-align: center;
-    .grid-content{
-        display: grid;
+    padding-bottom: 250px;
+    margin: 20px;
+
+    @include md {
+        margin: 0 auto;
+        width: 470px; 
     }
 
-    ul {
-        display: grid;
-        grid-gap: 10px;
-
-        grid-template-areas: 
-            "reason-1"
-            "reason-2"
-            "reason-3";
-
-        #reason-1 {
-            grid-area: reason-1;
-            background-color: $grey;
-            height: 687px;
+    .grid-content {
+        #title{ 
+            padding-bottom: 80px;
+            h1{
+                color: $blue;
+            }
         }
 
-        #gallery-1 {
-            background-image: url("../img/reason-1.png");
-            background-position: center;
-            background-size: cover;
-            height: 259px;
-            width: 300px; 
-         }
+        ul {
+            li {
+                background-color: $grey;
+                height: 590px;
 
-         #reason-2 {
-            grid-area: reason-2;
-            background-color: $grey;
-            height: 687px;
+                @include md {
+                    height: 710px;
+                }
+
+                // #content {
+                    // @include md {
+                    //     display: grid;
+                    //     grid-template-columns: 10% auto;
+                    //     grid-template-areas:
+                    //     "number body";
+                    // }
+                // }
+                h2{
+                    grid-area: number;
+                    color: $yellow;
+                    font-size: rem-calc(200);
+                    padding-top: 10px;
+
+                    @include md {
+                        font-size: rem-calc(300);
+                        text-align: left;
+                    }
+                }
+                p {
+                    grid-area: body;
+                    color: $black;
+                    margin: 40px;
+                    text-align: justify;
+
+                    @include md {
+                        margin-left: 90px;
+                    }
+                }
+            }
+
+            section {
+                background-position: center;
+                background-size: cover;
+                height: 280px;
+                width: 280px;
+
+                @include md {
+                    height: 470px;
+                    width: 470px;
+                }
+            }
+            #reason-1 {
+                grid-area: reason-1;
+                margin-bottom: 330px;
+
+                @include md {
+                    margin-bottom: 500px;
+                }
+    
+                #gallery-1 {
+                    background-image: url("../img/reason-1.png");
+                }
+            }
+
+            #reason-2 {
+                grid-area: reason-2;
+                margin-bottom: 330px;
+
+                @include md {
+                    margin-bottom: 500px;
+                }
+
+                #gallery-2 {
+                    background-image: url("../img/reason-2.png");
+                }
+            }
+
+            #reason-3 {
+                grid-area: reason-3;
+
+                #gallery-3 {
+                    background-image: url("../img/reason-3.png");
+                }
+            }
         }
-
-        #gallery-2 {
-            background-image: url("../img/reason-2.png");
-            background-position: center;
-            background-size: cover;
-            height: 259px;
-            width: 300px; 
-         }
-
-         #reason-3 {
-            grid-area: reason-3;
-            background-color: $grey;
-            height: 687px;
-        }
-
-        #gallery-3 {
-            background-image: url("../img/reason-3.png");
-            background-position: center;
-            background-size: cover;
-            height: 259px;
-            width: 300px; 
-         }
-
     }
 }

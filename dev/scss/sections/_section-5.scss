@@ -7,7 +7,8 @@
     height: 400px;
 
     @include md {
-        height: 712px;
+        height: 766px;
+        padding-top: 100px;
     }
 
     @include lg {
@@ -19,8 +20,8 @@
     }
 
     display: grid;
-        grid-template-columns: auto;
-        grid-template-areas: ". section-1 .";
+    grid-template-columns: auto;
+    grid-template-areas: ". section-1 .";
 
     >div {
         display: grid;
@@ -32,54 +33,39 @@
     #pull-quote { 
         grid-area: pull-quote;
         background-image: url(../img/banquet.png);
-        background-size: cover;
-        background-position: center;
+        background-size: 197px 347px;
+        background-position: right;
+        background-repeat: no-repeat;
         height: 364px;
-        width: 197px;
-       // margin-left: 113px;
+        width: 321px;
+        margin-right: auto;
 
         @include md {
+            background-size: 365px 676px;
             height: 676px;
             width: 365px;
+            margin-left: auto;
+            margin-right: 0;
         }
 
-        @include lg {
-            height: 1030px;
-            width: 555px;
-        }
+        // @include lg {
+        //     height: 1030px;
+        //     width: 555px;
+        // }
     
-        @include xl {
-            height: 1467px;
-        }
+        // @include xl {
+        //     height: 1467px;
+        // }
     }
 
-    h1 {
-        text-align: right;
-        width: 300px;
-    }
-   aside {
+    aside {
         grid-area: aside;
-        margin-left: 0px;
-        padding-top: 100px;
-        position: relative;
+        margin-left: 360px;
         top: 30px;
-
-        @include md {
-            font-size: 48px;
-            margin: 20px;
-            padding-top: 230px;
-            padding-left: 170px;
-        }
-
-        @include lg {
-            margin: 20px;
-            padding-top: 450px;
-            padding-left: 170px;
-        }
-    
-        @include xl {
-            height: 1467px;
-        }
+            h2 {
+                text-align: right;
+                
+            }
     }
     
 }

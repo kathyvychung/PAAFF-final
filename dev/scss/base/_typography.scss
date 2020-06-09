@@ -5,10 +5,16 @@ body{
     font-family: 'Righteous', cursive;
 }
 
-h1,h2,h3,h4{
+h1,h2,h4{
     font-family: 'Knewave', cursive;
     margin: 0;
     padding: 0;
+}
+
+h3 {
+    font-family: 'Bungee Inline', cursive;
+    font-size: rem-calc(48);
+    color: $red;
 }
 
 h1 {
@@ -41,7 +47,7 @@ h2 {
 
 
 
-p{
+p,h5{
     font-family: 'Righteous', cursive;
     margin: 0;
     padding: 0;
