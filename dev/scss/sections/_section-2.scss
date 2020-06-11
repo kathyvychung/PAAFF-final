@@ -80,6 +80,11 @@
                     display: block;
                     height: 378px;
                     width: 381px;
+                    margin-left: 130px;
+                    margin-top: 20px;
+                }
+
+                @include xl {
                     margin-left: 200px;
                     margin-top: 20px;
                 }

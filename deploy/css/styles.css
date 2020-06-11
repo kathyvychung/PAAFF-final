@@ -392,6 +392,15 @@ p, h5 {
 /* =============
     Buttons
 ============= */
+#button a:link,
+#button a:visited {
+  color: #000;
+  text-decoration: none; }
+
+#button a:hover,
+#button a:active {
+  color: #fff; }
+
 /* =============
     Forms
 ============= */
@@ -419,7 +428,7 @@ textarea {
       justify-content: flex-end; } }
   #nav-container ul li {
     margin-bottom: 20px;
-    border-bottom: 1px sold #fff; }
+    border-bottom: 1px sold #FFCD54; }
     #nav-container ul li a:link,
     #nav-container ul li a:visited {
       color: #000;
@@ -449,6 +458,9 @@ textarea {
   position: fixed;
   top: 0;
   width: 100%; }
+  @media (min-width: 992px) {
+    #header {
+      height: 158px; } }
   #header ul {
     text-align: center; }
   #header > div {
@@ -463,7 +475,18 @@ textarea {
         background-size: cover;
         background-position: center;
         height: 35px;
-        width: 70px; }
+        width: 70px;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap; }
+        #header > div #logo-container > div i {
+          cursor: pointer; }
+        @media (min-width: 992px) {
+          #header > div #logo-container > div {
+            height: 75px;
+            width: 150px;
+            margin: 0 auto;
+            margin-left: 200px; } }
     #header > div #burger-container {
       align-items: center;
       display: flex;
@@ -478,10 +501,20 @@ textarea {
     #header > div #nav-container {
       grid-area: nav;
       display: none;
-      padding: 20px; }
+      padding: 20px;
+      background-color: #FFCD54; }
       @media (min-width: 992px) {
         #header > div #nav-container {
-          display: block !important; } }
+          display: block !important;
+          background-color: #fff;
+          padding-top: 50px;
+          padding-right: 100px; } }
+    @media (min-width: 992px) {
+      #header > div {
+        display: grid;
+        grid-template-columns: 40% auto;
+        grid-template-areas: "logo nav";
+        margin: 30px; } }
     #header > div section i {
       color: #000; }
 
@@ -491,35 +524,82 @@ textarea {
 #footer {
   background-color: #fff;
   padding: 20px;
-  height: 264px;
-  text-align: center;
-  color: #DC1212; }
-  #footer h5 {
+  height: 264px; }
+  @media (min-width: 768px) {
+    #footer {
+      height: 362px; } }
+  @media (min-width: 992px) {
+    #footer {
+      height: 191px; } }
+  @media (min-width: 992px) {
+    #footer > div {
+      display: grid;
+      grid-template-columns: repeat 3 1fr;
+      grid-template-areas: "subscribe form button" "copyright copyright copyright"; } }
+  #footer > div h5 {
+    grid-area: subscribe;
+    color: #DC1212;
     font-size: 20px;
-    padding: 30px; }
-  #footer * {
+    padding: 30px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      #footer > div h5 {
+        width: 250px;
+        margin: 0 auto; } }
+    @media (min-width: 992px) {
+      #footer > div h5 {
+        width: 200px; } }
+  #footer > div section {
+    grid-area: form;
     box-sizing: border-box;
     text-align: center; }
-  #footer body {
-    background-color: #fff; }
-  #footer textarea {
-    font-size: 15px;
-    width: 70%;
-    resize: vertical;
-    border-radius: 6px;
-    border: 1;
-    height: 27px;
-    text-align: left; }
-  #footer #button {
+    @media (min-width: 992px) {
+      #footer > div section {
+        padding-top: 50px; } }
+    #footer > div section textarea {
+      font-size: 15px;
+      width: 238px;
+      resize: vertical;
+      border-radius: 6px;
+      border: 1;
+      height: 27px;
+      text-align: left; }
+      @media (min-width: 768px) {
+        #footer > div section textarea {
+          height: 40px;
+          width: 342px; } }
+      @media (min-width: 992px) {
+        #footer > div section textarea {
+          height: 32px;
+          width: 342px; } }
+  #footer > div #button {
+    grid-area: button;
     background-color: #DC1212;
     border-radius: 15px;
-    width: 100px;
+    width: 126px;
     height: 30px;
-    margin: 0 auto; }
-    #footer #button p {
+    margin: 0 auto;
+    margin-top: 50px; }
+    @media (min-width: 768px) {
+      #footer > div #button {
+        height: 40px;
+        width: 160px;
+        border-radius: 30px; } }
+    #footer > div #button p {
       color: #fff;
-      text-align: center; }
-
+      text-align: center;
+      padding-top: 3px; }
+  #footer > div p {
+    grid-area: copyright;
+    padding-top: 30px;
+    color: #DC1212;
+    text-align: center; }
+    @media (min-width: 768px) {
+      #footer > div p {
+        padding-bottom: 30px; } }
+    @media (min-width: 992px) {
+      #footer > div p {
+        padding-top: 40px; } }
 /* =============
     Section 1
 ============= */
@@ -527,15 +607,18 @@ textarea {
   background-color: #DC1212;
   color: #FFCD54;
   height: 500px;
+  padding-top: 20px;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: ". section-1 ."; }
   @media (min-width: 768px) {
     #section-1 {
-      height: 672px; } }
+      height: 672px;
+      padding-top: 40px; } }
   @media (min-width: 992px) {
     #section-1 {
-      height: 800px; } }
+      height: 800px;
+      padding-top: 100px; } }
   @media (min-width: 1200px) {
     #section-1 {
       height: 900px;
@@ -657,6 +740,10 @@ textarea {
           display: block;
           height: 378px;
           width: 381px;
+          margin-left: 130px;
+          margin-top: 20px; } }
+      @media (min-width: 1200px) {
+        #section-2 .grid-content h1 #dance {
           margin-left: 200px;
           margin-top: 20px; } }
   #section-2 .grid-content p {
@@ -770,62 +857,145 @@ textarea {
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: ". section-4 .";
-  padding-bottom: 250px;
-  margin: 20px; }
+  padding-bottom: 150px;
+  margin: 30px; }
   @media (min-width: 768px) {
     #section-4 {
-      margin: 0 auto;
-      width: 470px; } }
+      margin: 0px;
+      padding-bottom: 400px; } }
+  @media (min-width: 992px) {
+    #section-4 {
+      grid-template-areas: ". grid-content .";
+      padding-top: 400px;
+      padding-bottom: 200px; } }
   #section-4 .grid-content #title {
-    padding-bottom: 80px; }
+    padding-bottom: 100px; }
     #section-4 .grid-content #title h1 {
       color: #1A5C85; }
+    @media (min-width: 768px) {
+      #section-4 .grid-content #title {
+        padding-top: 90px;
+        margin: 0px;
+        padding-bottom: 0px; } }
+    @media (min-width: 992px) {
+      #section-4 .grid-content #title {
+        padding-bottom: 60px; } }
   #section-4 .grid-content ul li {
     background-color: #F5F5F5;
     height: 590px; }
     @media (min-width: 768px) {
       #section-4 .grid-content ul li {
-        height: 710px; } }
-    #section-4 .grid-content ul li h2 {
-      grid-area: number;
-      color: #FFCD54;
-      font-size: 12.5rem;
-      padding-top: 10px; }
+        display: grid;
+        grid-template-columns: 10% auto;
+        grid-template-areas: "number body" "picture picture";
+        margin: 130px; } }
+    @media (min-width: 992px) {
+      #section-4 .grid-content ul li {
+        height: 480px;
+        width: 530px;
+        grid-template-columns: 14% auto 20%;
+        grid-template-areas: "number body picture";
+        margin: 20px; } }
+    #section-4 .grid-content ul li #large-display {
+      display: none; }
       @media (min-width: 768px) {
-        #section-4 .grid-content ul li h2 {
-          font-size: 18.75rem;
-          text-align: left; } }
-    #section-4 .grid-content ul li p {
-      grid-area: body;
-      color: #000;
-      margin: 40px;
-      text-align: justify; }
+        #section-4 .grid-content ul li #large-display {
+          height: 450px; } }
+      #section-4 .grid-content ul li #large-display h2 {
+        grid-area: number;
+        color: #FFCD54;
+        font-size: 12.5rem;
+        position: relative;
+        display: none; }
+        @media (min-width: 768px) {
+          #section-4 .grid-content ul li #large-display h2 {
+            display: block;
+            font-size: 18.75rem;
+            text-align: left;
+            top: 120px;
+            left: -100px; } }
+        @media (min-width: 992px) {
+          #section-4 .grid-content ul li #large-display h2 {
+            font-size: 23.125rem;
+            top: 70px;
+            left: -120px; } }
+      #section-4 .grid-content ul li #large-display p {
+        grid-area: body;
+        color: #000;
+        text-align: justify;
+        display: none; }
+        @media (min-width: 768px) {
+          #section-4 .grid-content ul li #large-display p {
+            width: 300px;
+            line-height: 1.75rem;
+            margin-left: 140px;
+            display: block; } }
+        @media (min-width: 992px) {
+          #section-4 .grid-content ul li #large-display p {
+            margin-right: 90px;
+            margin-left: 100px; } }
       @media (min-width: 768px) {
-        #section-4 .grid-content ul li p {
-          margin-left: 90px; } }
+        #section-4 .grid-content ul li #large-display {
+          display: block; } }
+    #section-4 .grid-content ul li #small-display {
+      display: block; }
+      #section-4 .grid-content ul li #small-display h2 {
+        color: #FFCD54;
+        font-size: 12.5rem;
+        position: relative;
+        display: block; }
+        @media (min-width: 768px) {
+          #section-4 .grid-content ul li #small-display h2 {
+            display: none; } }
+        #section-4 .grid-content ul li #small-display h2 p {
+          color: #000;
+          margin: 30px;
+          text-align: justify;
+          display: block; }
+          @media (min-width: 768px) {
+            #section-4 .grid-content ul li #small-display h2 p {
+              line-height: 1.75rem;
+              margin: 50px;
+              display: none; } }
+      @media (min-width: 768px) {
+        #section-4 .grid-content ul li #small-display {
+          display: none; } }
   #section-4 .grid-content ul section {
+    grid-area: picture;
     background-position: center;
     background-size: cover;
-    height: 280px;
-    width: 280px; }
+    height: 260px; }
     @media (min-width: 768px) {
       #section-4 .grid-content ul section {
-        height: 470px;
-        width: 470px; } }
+        height: 490px;
+        width: 490px; } }
+    @media (min-width: 992px) {
+      #section-4 .grid-content ul section {
+        margin-top: 70px;
+        height: 450px;
+        width: 450px; } }
   #section-4 .grid-content ul #reason-1 {
     grid-area: reason-1;
-    margin-bottom: 330px; }
+    margin-bottom: 250px; }
     @media (min-width: 768px) {
       #section-4 .grid-content ul #reason-1 {
         margin-bottom: 500px; } }
+    @media (min-width: 992px) {
+      #section-4 .grid-content ul #reason-1 {
+        margin-bottom: 200px; } }
     #section-4 .grid-content ul #reason-1 #gallery-1 {
       background-image: url("../img/reason-1.png"); }
   #section-4 .grid-content ul #reason-2 {
     grid-area: reason-2;
-    margin-bottom: 330px; }
+    margin-bottom: 200px; }
+    #section-4 .grid-content ul #reason-2 #red {
+      color: #DC1212; }
     @media (min-width: 768px) {
       #section-4 .grid-content ul #reason-2 {
         margin-bottom: 500px; } }
+    @media (min-width: 992px) {
+      #section-4 .grid-content ul #reason-2 {
+        margin-bottom: 200px; } }
     #section-4 .grid-content ul #reason-2 #gallery-2 {
       background-image: url("../img/reason-2.png"); }
   #section-4 .grid-content ul #reason-3 {
@@ -845,14 +1015,13 @@ textarea {
   grid-template-areas: ". section-1 ."; }
   @media (min-width: 768px) {
     #section-5 {
-      height: 766px;
-      padding-top: 100px; } }
+      height: 766px; } }
   @media (min-width: 992px) {
     #section-5 {
-      height: 1161px; } }
+      height: 973px; } }
   @media (min-width: 1200px) {
     #section-5 {
-      height: 1467px; } }
+      height: 1000px; } }
   #section-5 > div {
     display: grid;
     grid-template-columns: 50px auto;
@@ -863,9 +1032,7 @@ textarea {
     background-size: 197px 347px;
     background-position: right;
     background-repeat: no-repeat;
-    height: 364px;
-    width: 321px;
-    margin-right: auto; }
+    height: 364px; }
     @media (min-width: 768px) {
       #section-5 #pull-quote {
         background-size: 365px 676px;
@@ -873,49 +1040,100 @@ textarea {
         width: 365px;
         margin-left: auto;
         margin-right: 0; } }
+    @media (min-width: 992px) {
+      #section-5 #pull-quote {
+        background-size: 450px 900px;
+        height: 1000px;
+        width: 600px; } }
   #section-5 aside {
-    grid-area: aside;
-    margin-left: 360px;
-    top: 30px; }
+    grid-area: aside; }
     #section-5 aside h2 {
-      text-align: right; }
-
+      text-align: right;
+      padding-top: 130px;
+      padding-right: 100px; }
+      @media (min-width: 768px) {
+        #section-5 aside h2 {
+          padding-top: 230px;
+          padding-right: 280px; } }
+      @media (min-width: 992px) {
+        #section-5 aside h2 {
+          padding-top: 350px;
+          padding-right: 200px;
+          padding-left: 100px; } }
 /* =============
     Section 6
 ============= */
 #section-6 {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 10px auto 10px;
   grid-template-areas: ". section-6 .";
   background-image: url(../img/contact.jpg);
   background-position: center;
   background-size: cover;
   height: 280px; }
-  #section-6 h2 {
-    color: #FFCD54;
-    text-align: center;
-    font-size: 24px; }
-  #section-6 * {
-    box-sizing: border-box;
-    text-align: center;
-    margin: 5px; }
-  #section-6 body {
-    background-color: #fff; }
-  #section-6 textarea {
-    font-size: 15px;
-    width: 70%;
-    resize: vertical;
-    border-radius: 6px;
-    border: 0;
-    height: 27px;
-    text-align: left; }
-  #section-6 #big {
-    height: 70px; }
-  #section-6 #button {
-    background-color: #DC1212;
-    border-radius: 15px;
-    color: #fff;
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    margin: 0 auto; }
+  @media (min-width: 768px) {
+    #section-6 {
+      height: 511px; } }
+  @media (min-width: 992px) {
+    #section-6 {
+      height: 964px; } }
+  #section-6 > div {
+    grid-area: section-6; }
+    #section-6 > div h2 {
+      color: #FFCD54;
+      text-align: center; }
+      @media (min-width: 768px) {
+        #section-6 > div h2 {
+          font-size: 60px;
+          padding-top: 30px; } }
+      @media (min-width: 992px) {
+        #section-6 > div h2 {
+          padding-bottom: 30px;
+          padding-top: 155px; } }
+    #section-6 > div * {
+      box-sizing: border-box;
+      text-align: center;
+      margin: 8px; }
+      @media (min-width: 768px) {
+        #section-6 > div * {
+          margin: 15px; } }
+    #section-6 > div textarea {
+      font-size: 15px;
+      width: 70%;
+      resize: vertical;
+      border-radius: 6px;
+      border: 0;
+      height: 25px;
+      text-align: left; }
+      @media (min-width: 768px) {
+        #section-6 > div textarea {
+          height: 40px;
+          width: 50%; } }
+      @media (min-width: 992px) {
+        #section-6 > div textarea {
+          height: 50px; } }
+    #section-6 > div #big {
+      height: 70px; }
+      @media (min-width: 768px) {
+        #section-6 > div #big {
+          height: 100px; } }
+      @media (min-width: 992px) {
+        #section-6 > div #big {
+          height: 247px; } }
+    #section-6 > div #button {
+      background-color: #DC1212;
+      border-radius: 20px;
+      color: #fff;
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      margin: 0 auto; }
+      @media (min-width: 768px) {
+        #section-6 > div #button {
+          width: 140px;
+          height: 40px; } }
+      @media (min-width: 992px) {
+        #section-6 > div #button {
+          border-radius: 40px;
+          height: 50px;
+          width: 174px; } }

@@ -5,13 +5,16 @@
     background-color: $red;
     color: $yellow;
     height: 500px;
+    padding-top: 20px;
 
     @include md {
         height: 672px;
+        padding-top: 40px;
     }
 
     @include lg {
         height: 800px;
+        padding-top: 100px;
     }
 
     @include xl {
@@ -91,6 +94,5 @@
             padding-top: 200px;
             padding-left: 70px;
         }
-    }
-    
+    }   
 }

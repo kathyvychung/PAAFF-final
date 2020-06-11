@@ -8,15 +8,14 @@
 
     @include md {
         height: 766px;
-        padding-top: 100px;
     }
 
     @include lg {
-        height: 1161px;
+        height: 973px;
     }
 
     @include xl {
-        height: 1467px;
+        height: 1000px;
     }
 
     display: grid;
@@ -37,8 +36,6 @@
         background-position: right;
         background-repeat: no-repeat;
         height: 364px;
-        width: 321px;
-        margin-right: auto;
 
         @include md {
             background-size: 365px 676px;
@@ -48,10 +45,11 @@
             margin-right: 0;
         }
 
-        // @include lg {
-        //     height: 1030px;
-        //     width: 555px;
-        // }
+        @include lg {
+            background-size: 450px 900px;
+            height: 1000px;
+            width: 600px;
+        }
     
         // @include xl {
         //     height: 1467px;
@@ -60,11 +58,23 @@
 
     aside {
         grid-area: aside;
-        margin-left: 360px;
-        top: 30px;
+        // top: 30px;
+        
             h2 {
                 text-align: right;
-                
+                padding-top: 130px;   
+                padding-right: 100px;
+
+                @include md {
+                    padding-top: 230px;
+                    padding-right: 280px;
+                }
+
+                @include lg {
+                    padding-top: 350px;
+                    padding-right: 200px;
+                    padding-left: 100px;
+                }
             }
     }
     

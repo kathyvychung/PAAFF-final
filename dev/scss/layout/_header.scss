@@ -4,6 +4,10 @@
 #header {
     background-color: $white;
 
+    @include lg {
+        height: 158px;
+    }
+
     ul {
         text-align: center;
     }
@@ -22,12 +26,28 @@
         #logo-container {
             grid-area: logo;
             padding: 20px;
+
             >div {
                 background-image: url(../img/logo.svg);
                 background-size: cover;
                 background-position: center;
                 height: 35px;
                 width: 70px;
+                overflow: hidden;
+                text-indent:100%;
+                white-space:nowrap;
+
+                i {
+                    cursor: pointer;
+                }
+    
+
+                @include lg {
+                    height: 75px;
+                    width: 150px;
+                    margin: 0 auto;
+                    margin-left: 200px;
+                }
             }
         }
 
@@ -51,18 +71,30 @@
             grid-area: nav;
             display: none;
             padding: 20px;
+            background-color: $yellow;
 
             @include lg {
                 display: block !important;
+                background-color: $white;
+                padding-top: 50px;
+                padding-right: 100px;
+
             }
         }
+
         grid-template-columns: 80% auto;
+
+        @include lg {
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-template-areas: "logo nav";
+            margin: 30px;
+        }
+
         section {
             i {
                 color: $black;
             }
         }
-        
     }
-
 }
